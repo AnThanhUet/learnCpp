@@ -1,10 +1,16 @@
-#include <iostream>
-
+class DateClass // members are private by default
+{
+    int m_month {}; // private by default, can only be accessed by other members
+    int m_day {}; // private by default, can only be accessed by other members
+    int m_year {}; // private by default, can only be accessed by other members
+};
+ 
 int main()
 {
-	int x = 5;
-	int y;
-	y = x++;
-	std::cout << y;
-	return 0;
+    DateClass date;
+    date.m_month = 10; // error
+    date.m_day = 14; // error
+    date.m_year = 2020; // error
+ 
+    return 0;
 }
