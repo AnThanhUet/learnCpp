@@ -25,7 +25,7 @@ public:
         if (m_next == m_array.size())
             return false;
         
-        m_array[m_next++] = value; //gan value then increase m_next
+        m_array[m_next++] = value; //asigning value then increase m_next
         return true;
     }
 
