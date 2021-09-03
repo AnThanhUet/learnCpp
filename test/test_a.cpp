@@ -1,29 +1,9 @@
-#include <string>
-#include <iostream>
- 
-class Employee
-{
-private:
-    int m_id{};
-    std::string m_name{};
- 
-public:
-    Employee(int id=0, const std::string &name=""):
-        m_id{ id }, m_name{ name }
-    {
-        std::cout << "Employee " << m_name << " created.\n";
-    }
- 
-    // Use a delegating constructor to minimize redundant code
-    Employee(const std::string &name) : Employee{ 0, name }
-    { 
-		m_name = "hihi";
-	}
+#include<iostream>
 
-};
-
-int main()
-{
-	Employee test("alo");
-	return 0;
+int main() {
+    int n = 5;
+    int a[n] =  { 1, 3, 4, 5, 8};
+    for (int i = 0; i < n - 1; i++)
+        std::cout << a[i] << " ";
+    return 0;
 }
